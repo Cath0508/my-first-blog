@@ -6,17 +6,12 @@
     <div>
         <h1>Bem-vindos à Cathlândia</h1>
     </div>
-
+{% for post in posts %}
     <div>
-        <p>publicado em 2023</p>
-        <h2>Capítulo 1</h2>
-        <p>gente isso aqui é muito fofo eu to muito emocionada</p>
+    <p>published: {{ post.published_date }}</p>
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>{{ post.text|linebreaksbr }}</p>
     </div>
-
-    <div>
-        <p>publicado: 14.06.2014, 12:14</p>
-        <h2>Capítulo 2</h2>
-        <p>mano e o PAS que tá chegando</p>
-    </div>
+{% endfor %}
 </body>
 </html>
